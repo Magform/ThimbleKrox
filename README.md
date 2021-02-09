@@ -81,6 +81,8 @@ When all the calibration lines in the calibration code have been adjusted and th
 >    `right ();` <br>
 >  `}` <br>
 
+Now it's time to upload the main code
+
 ### Step 6: Finish the project
 Now is the time to wear your thimble and play with it!
 
