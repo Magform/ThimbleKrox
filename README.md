@@ -65,18 +65,18 @@ Now you have to reopen the code and go to the lines marked with "// calibration 
 
 When all the calibration lines in the calibration code have been adjusted and therefore the calibration version thimble is functional, the values of the main code must be adjusted to match the calibration code.
 
->Ex.
->Calibration Code:
+>Ex.<br>
+>Calibration Code:<br>
 >   `if (ax> = 5000) {// calibration line` <br>
 >    `right ();` <br>
 >  `}` <br>
 >
->Main code:
+>Main code:<br>
 >  `if (ax> = 15000) {// calibration line` <br>
 >    `right ();` <br>
 >  `}` <br>
 >
->The main code must be changed to:
+>The main code must be changed to:<br>
 >  `if (ax> = 5000) {// calibration line` <br>
 >    `right ();` <br>
 >  `}` <br>
