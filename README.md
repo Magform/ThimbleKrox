@@ -43,25 +43,43 @@ You should now see something like this:<br>
 Where is shown the direction in which, if correctly calibrated, you want to make the pointer go and then some values necessary for calibration.
 Now you have to reopen the code and go to the lines marked with "// calibration line" and change the numerical values until you get the correct direction. (Every time you change a value in the code you need to reupload it in the Arduino)
 
-Ex.<br>
-Serial monitor:<br>
-`left | gx = 3165 gy = 469 gz = -1055 | ax = 5232 ay = 2064 az = -4496`<br>
+>Ex.<br>
+>Serial monitor:<br>
+>`left | gx = 3165 gy = 469 gz = -1055 | ax = 5232 ay = 2064 az = -4496`<br>
+>
+>Calibration code:<br>
+> `if (ax> = 15000) {                                 // calibration line`<br>
+>   ` right ();`<br>
+> ` } `<br>
+>
+>The serial monitor marks "left" but we want this line to be marked "right" so we need to change the "15000" value to "5000". This is because, in this case, we have to make >sure that the detected "ax" is greater than the value in the code. We understand that it must be greater because in the code there is a major sign and that we have to look at >the "ax" of the serial monitor because in the code there is x. (only the numerical values of the code need to be changed)
 
-Code:<br>
- `if (ax> = 15000) {                                 // calibration line`<br>
-   ` right ();`<br>
- ` } `<br>
+>After reloading the code in the Arduino we will have:
+>Serial monitor:<br>
+>`right | gx = 3165 gy = 469 gz = -1055 | ax = 5232 ay = 2064 az = -4496`<br>
 
-The serial monitor marks "left" but we want this line to be marked "right" so we need to change the "15000" value to "5000". This is because, in this case, we have to make sure that the detected "ax" is greater than the value in the code. We understand that it must be greater because in the code there is a major sign and that we have to look at the "ax" of the serial monitor because in the code there is x. (only the numerical values of the code need to be changed)
+>Calibration code:<br>
+ >`if (ax> = 5000) {                         // calibration line`<br>
+ >  ` right ();`<br>
+ >` } `<br>
 
-After reloading the code in the Arduino we will have:
-Serial monitor:<br>
-`right | gx = 3165 gy = 469 gz = -1055 | ax = 5232 ay = 2064 az = -4496`<br>
+When all the calibration lines in the calibration code have been adjusted and therefore the calibration version thimble is functional, the values of the main code must be adjusted to match the calibration code.
 
-Code:<br>
- `if (ax> = 5000) {                         // calibration line`<br>
-   ` right ();`<br>
- ` } `<br>
+>Ex.
+>Calibration Code:
+>   `if (ax> = 5000) {// calibration line` <br>
+>    `right ();` <br>
+>  `}` <br>
+>
+>Main code:
+>  `if (ax> = 15000) {// calibration line` <br>
+>    `right ();` <br>
+>  `}` <br>
+>
+>The main code must be changed to:
+>  `if (ax> = 5000) {// calibration line` <br>
+>    `right ();` <br>
+>  `}` <br>
 
 ### Step 6: Finish the project
 Now is the time to wear your thimble and play with it!
