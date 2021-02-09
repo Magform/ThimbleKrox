@@ -52,7 +52,7 @@ Now you have to reopen the code and go to the lines marked with "// calibration 
 >   ` right ();`<br>
 > ` } `<br>
 >
->The serial monitor marks "left" but we want this line to be marked "right" so we need to change the "15000" value to "5000". This is because, in this case, we have to make >sure that the detected "ax" is greater than the value in the code. We understand that it must be greater because in the code there is a major sign and that we have to look at >the "ax" of the serial monitor because in the code there is "ax". (only the numerical values of the code need to be changed)
+>The serial monitor marks "left" but we want this line to be marked "right" so we need to change the "15000" value to "5000". This is because, in this case, we have to make sure that the detected "ax" is greater than the value in the code. We understand that it must be greater because in the code there is a major sign and that we have to look at the "ax" of the serial monitor because in the code there is "ax". (only the numerical values of the code need to be changed)
 >
 >After reloading the code in the Arduino we will have:
 >Serial monitor:<br>
