@@ -87,4 +87,3 @@ Now it's time to upload the main code
 Now is the time to wear your thimble and play with it!
 
 -------------
-## Hackster guide [here](https://www.hackster.io/magform/thimblekrox-mouse-control-with-your-fingers-dd8881).
